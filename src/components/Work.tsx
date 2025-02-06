@@ -41,6 +41,17 @@ const Work = () => {
       delay: 0.2,
     });
   }, []);
+
+  let projects = [
+    {
+      title: "Al-Anwar",
+      category: "Web Development",
+      tools: ["svelte", "Php", "TypeScript", "Mysql"],
+      features: ["Management", "Profile"],
+      image: "/images/al-anwar.png",
+    },
+    // Add more projects here
+  ]
   return (
     <div className="work-section" id="work">
       <div className="work-container section-container">
@@ -48,21 +59,21 @@ const Work = () => {
           My <span>Work</span>
         </h2>
         <div className="work-flex">
-          {[...Array(6)].map((_value, index) => (
+          {projects.map((_value, index) => (
             <div className="work-box" key={index}>
               <div className="work-info">
                 <div className="work-title">
                   <h3>0{index + 1}</h3>
 
                   <div>
-                    <h4>Project Name</h4>
-                    <p>Category</p>
+                    <h4>{_value.title}</h4>
+                    <p>{_value.category}</p>
                   </div>
                 </div>
-                <h4>Tools and features</h4>
-                <p>Javascript, TypeScript, React, Threejs</p>
+                <h4>{_value.features}</h4>
+                <p>{_value.tools}</p>
               </div>
-              <WorkImage image="/images/placeholder.webp" alt="" />
+              <WorkImage image={_value.image} alt="" />
             </div>
           ))}
         </div>

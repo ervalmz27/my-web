@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./styles/Loading.css";
 import { useLoading } from "../context/LoadingProvider";
-
+import Mz from "../assets/Mz.png";
 import Marquee from "react-fast-marquee";
 
 const Loading = ({ percent }: { percent: number }) => {
@@ -46,7 +46,7 @@ const Loading = ({ percent }: { percent: number }) => {
     <>
       <div className="loading-header">
         <a href="/#" className="loader-title" data-cursor="disable">
-          Logo
+          <img src={Mz} width={64} height={64} alt="logo" />
         </a>
         <div className={`loaderGame ${clicked && "loader-out"}`}>
           <div className="loaderGame-container">
@@ -118,7 +118,7 @@ export const setProgress = (setLoading: (value: number) => void) => {
   }
 
   function loaded() {
-    return new Promise<number>((resolve) => {
+    return new Promise < number > ((resolve) => {
       clearInterval(interval);
       interval = setInterval(() => {
         if (percent < 100) {

@@ -6,9 +6,10 @@ const About = () => {
       <div className="about-me">
         <h3 className="title">About Me</h3>
         <p className="para">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-          dolores numquam iusto Ratione earum ducimus autem id iure pariatur
-          dolorum quae maiores.
+          Hello! I'm Naufal Mumtaz a passionate Creative Developer with a strong background
+          in developing scalable web applications and passionate about emerging technologies.
+          With over 4+ years of experience in the tech industry, I have honed my skills in various
+          programming languages and frameworks.
         </p>
       </div>
     </div>
